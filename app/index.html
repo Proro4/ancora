@@ -4,17 +4,20 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>generator webapp</title>
+    <title>Ancora</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.css" />
+    <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.theme.default.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     
@@ -23,53 +26,149 @@
     <!-- endbuild -->
   </head>
   <body>
-    <!--[if IE]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills float-right">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-        <h3 class="text-muted">generator webapp</h3>
+    <header>
+      <div class="slider">
+          <div class="owl-carousel owl-theme">
+            <div class="owl-carousel__items">
+              <img src="images/slider.png" alt="">
+            </div>
+            <div class="owl-carousel__items">
+              <img src="images/slider.png" alt="">
+            </div>
+            <div class="owl-carousel__items">
+              <img src="images/slider.png" alt="">
+            </div>
+            <div class="owl-carousel__items">
+              <img src="images/slider.png" alt="">
+            </div>
+          </div>
       </div>
-
-      <div class="jumbotron">
-        <h1 class="display-3">'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-          <h4>Sass</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
+      <div  class="header">
+        <div class="container">
+          <div class="row">
+            <div class="header__menu">
+              <div class="header__menu__left">
+                <ul class="lang">
+                  <li><p>РУС</p></li>
+                  <li><a href="#">УКР</a></li>
+                </ul>
+                <ul class="header__menu__list">
+                  <li><a href="#">О бренде</a></li>
+                  <li><a href="#">История и производтво</a></li>
+                </ul>
+              </div>
+              <div class="header__menu__center">
+                <a href="#" class="header__logo">
+                  <img src="images/logo.png" alt="">
+                </a>
+              </div>
+              <div class="header__menu__right">
+                <ul class="header__menu__top">
+                  <li><a href="#"><img src="images/login_ic.png" alt=""></a></li>
+                  <li><a href="#"><img src="images/shop_ic.png" alt=""></a></li>
+                  <li><a href="#"><img src="images/search_ic.png" alt=""></a></li>
+                </ul>
+                <ul class="header__menu__list">
+                  <li><a href="#">Коллекции</a></li>
+                  <li><a href="#">Магазин</a></li>
+                  <li><a href="#">Список Магазинов</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
+    </header>
+    <section class="about">
+      <div class="container">
+        <div class="row">
+          <h2>
+            Все этапы производства Ancora <br>
+            по-прежднему сосредоточены в Италии
+          </h2>
+          <div class="about__info">
+            <div class="about__info__text">
+              <h2>О Бренде</h2>
+              <p>
+                История Анкора - это не только хронология одной из первых италянских компаний, выпускающих эксклюзивные ручки, но и история её создателя - Giuseppe Zanini, который...
+              </p>
+              <a href="#" class="butt butt__link">
+                Подробней
+              </a>
+            </div>
+            <div class="about__info__img">
+              <img src="images/img_1.png" alt="">
+            </div>
+          </div>
+          <div class="about__info">
+            <div class="about__info__img">
+              <img src="images/img_2.png" alt="">
+            </div>
+            <div class="about__info__text">
+              <h2>История и Производство</h2>
+              <span>с 1919 года</span>
+              <p>
+                Мы отказываемся от массового производства в пользу ручного друта, марка обеспечивает свое будущее, опираясь на сильные традиции прошлого, оставаясь, таким образом, верным своему производителю и названию.
+              </p>
+              <a href="#" class="butt butt__link">
+                Подробней
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    
+    </section>
+    <section class="links">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6"><a class="links__catalog" href="#"><h2>Каталог</h2> <span class="butt butt__link">Перейти</span></a></div>
+          <div class="col-md-6"><a class="links__list" href="#"><h2>Cписок Магазинов</h2> <span class="butt butt__link">Посмотреть</span></a></div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="footer">
+            <ul class="footer__menu">
+              <li><a href="#">О бренде</a></li>
+              <li><a href="#">История и производтво</a></li>
+              <li><a href="#">Коллекции</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Список Магазинов</a></li>
+            </ul>
+            <ul class="footer__contacts">
+              <li><h4>Контакты</h4></li>
+              <li><p>Телефон </p> <a href="#"> +35725051515</a></li>
+              <li><p>E-mail </p> <a href="#"> info@ancora1919.com</a></li>
+              <li><p>Building D1, Shop 6,</p></li>
+              <li><p>Limassol Marina, 3601 Limassol, Cyprus</p></li>
+            </ul>
+            <div class="footer__info">
+              <ul class="footer__info__soc">
+                <li><img src="images/" alt=""></li>
+                <li><img src="images/" alt=""></li>
+                <li><img src="images/" alt=""></li>
+                <li><img src="images/" alt=""></li>
+                <li><img src="images/" alt=""></li>
+              </ul>
+              <ul class="footer__info__list">
+                <li><a href="#">Правовая информация</a></li>
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Программа лояльности</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-copy">
+            <div class="footer__logo">
+              <img src="" alt="">
+            </div>
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -83,6 +182,8 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/owl.carousel/dist/owl.carousel.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
@@ -101,6 +202,7 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
+    <script src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>

@@ -1,90 +1,330 @@
-// bower:scss
-// endbower
-
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+@font-face {
+  font-family: 'NotoSans-Regular';
+  src: local('Noto Sans'), local('NotoSans'),
+         url('../fonts/notosans.woff2') format('woff2'),
+         url('../fonts/notosans.woff') format('woff'),
+         url('../fonts/notosans.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
-
-/* Space out content a bit */
-body {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+@font-face {
+  font-family: 'NotoSans-Italic';
+  src: local('Noto Sans Italic'), local('NotoSans-Italic'),
+         url('../fonts/notosansitalic.woff2') format('woff2'),
+         url('../fonts/notosansitalic.woff') format('woff'),
+         url('../fonts/notosansitalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
 }
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-right: 1rem;
-  padding-left: 1rem;
+@font-face {
+  font-family: 'NotoSans-Bold';
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+       url('../fonts/notosansbold.woff2') format('woff2'),
+       url('../fonts/notosansbold.woff') format('woff'),
+       url('../fonts/notosansbold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
-
-/* Custom page header */
-.header {
-  padding-bottom: 1rem;
-  border-bottom: .05rem solid #e5e5e5;
+@font-face {
+  font-family: 'NotoSans-BoldItalic';
+  src: local('Noto Sans Bold Italic'), local('NotoSans-BoldItalic'),
+         url('../fonts/notosansbolditalic.woff2') format('woff2'),
+         url('../fonts/notosansbolditalic.woff') format('woff'),
+         url('../fonts/notosansbolditalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
 }
-
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 3rem;
+$red: #ac1a2f;
+$black: #212121;
+p,a,span{
+  font-family: 'NotoSans-Regular';
 }
-
-/* Custom page footer */
-.footer {
-  padding-top: 1.5rem;
-  color: #777;
-  border-top: .05rem solid #e5e5e5;
+p{
+  font-size: 15px;
 }
-
-/* Customize container */
-@media (min-width: 48em) {
-  .container {
-    max-width: 46rem;
-  }
-}
-.container-narrow > hr {
-  margin: 2rem 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
+h2{
   text-align: center;
-  border-bottom: .05rem solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: .75rem 1.5rem;
-  font-size: 1.5rem;
-}
+  font-size: 25px;
+  margin-bottom: 80px;
+  font-family: 'NotoSans-Regular';
 
-/* Supporting marketing content */
-.marketing {
-  margin: 3rem 0;
 }
-.marketing p + h4 {
-  margin-top: 1.5rem;
+header{
+  margin-bottom: 85px;
 }
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 48em) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
+.butt{
+  font-size: 10px;
+  font-family: 'NotoSans-Regular';
+  text-transform: uppercase;
+  padding: 17px 50px;
+  color: $black;
+  &:hover{
+    color: black;
+    text-decoration: none;
   }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 2rem;
+  &__link{
+    border:1px solid black;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+}
+.lang{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-left: 0;
+  li{
+    display: inline-block;
+    p{
+      color: white;
+      font-size: 11px;
+      position: relative;
+      cursor: pointer;
+      font-family: 'NotoSans-Regular';
+      &:after{
+        position: absolute;
+        content: '';
+        right: -15px;
+        top: 6px;
+        background: url("../images/lang-arrow.png")no-repeat center;
+        height: 4px;
+        width: 9px;
+      }
+    }
+    a{
+      font-size: 11px;
+    }
+  }
+}
+.header{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid white;
+  &__logo{
+    padding: 10px 20px 20px;
+    display: flex;
+    background: $red;
+  }
+  &__menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__left{
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      .header__menu__list{
+        padding-left:100px;
+      }
+    }
+    &__right{
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+    }
+    &__top{
+      display: flex;
+      padding-left: 0;
+      justify-content: flex-end;
+      margin-top: 10px;
+      margin-bottom: 40px;
+      li{
+        display:flex;
+        a{
+          margin-left: 20px;
+          img{
+            max-width: 18px;
+            max-height: 18px;
+          }
+        }
+      }
+    }
+    &__list{
+      width: 100%;
+      display: flex;
+      padding-left: 0;
+      align-items: center;
+      justify-content: space-between;
+      li{
+        display: flex;
+        a{
+          text-transform: uppercase;
+          color: white;
+        }
+      }
+    }
+  }
+}
+.about{
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    &__text{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      min-width: 35%;
+      p{
+        padding: 0 100px 25px;
+      }
+    }
+    h2{
+      margin-bottom: 23px;
+    }
+  }
+}
+.links{
+  a{
+    height: 330px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+      text-decoration: none;
+    }
+    h2{
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+    .butt{
+      position: relative;
+      z-index: 1;
+      border-color: white;
+      color: white;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  &__list{
+    position: relative;
+    overflow: hidden;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: url("../images/info-1_1.png")no-repeat center;
+      background-size: cover;
+      transition: 0.3s all;
+    }
+    &:hover{
+      &::before{
+        transform: scale(1.06);
+      }
+    }
+  }
+  &__catalog{
+    position: relative;
+    overflow: hidden;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: url("../images/info-1_2.png")no-repeat center;
+      background-size: cover;
+      transition: 0.3s all;
+    }
+    &:hover{
+      &::before{
+        transform: scale(1.06);
+      }
+    }
+  }
+}
+footer{
+  padding: 40px 0 25px;
+  margin-top: 230px;
+  background: $black;
+  .footer{
+    display: flex;
+    justify-content: space-between;
+    &__menu{
+      padding-left: 0;
+      li{
+        display: block;
+        margin-bottom: 8px;
+        a{
+          color: #7b7b7b;
+          text-transform: uppercase;
+        }
+      }
+    }
+    &__contacts{
+      padding-left: 0;
+      li{
+        display: block;
+        h4{
+          margin: 0;
+          margin-bottom: 8px;
+          text-transform: uppercase;
+          color: #7b7b7b;
+        }
+        p{
+          display: inline-block;
+          color: #7b7b7b;
+        }
+        a{
+          color: #7b7b7b;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+.owl-carousel .owl-item img{
+  object-fit: cover;
+}
+.owl-theme .owl-nav{
+  position: absolute;
+  width: 1100px;
+  margin-left: -550px;
+  left: 50%;
+  top: 50%;
+}
+.owl-carousel .owl-nav button.owl-prev{
+  position: absolute;
+  left: 0;
+    background: url("../images/s-arrow-left.png")no-repeat center;
+    height: 82px;
+    width: 61px;
+    display: inline-block;
+  transition: 0.3s all;
+  &:hover{
+    background: url("../images/s-arrow-left.png")no-repeat center;
+    transform: scale(1.05);
+  }
+  &:focus{
+    outline: 0;
+    border: 0;
+    transform: scale(0.9);
+  }
+}
+.owl-carousel .owl-nav button.owl-next{
+  position: absolute;
+  right: 0;
+    background: url("../images/s-arrow-right.png")no-repeat center;
+    height: 82px;
+    width: 61px;
+    display: inline-block;
+  transition: 0.3s all;
+  &:hover{
+    background: url("../images/s-arrow-right.png")no-repeat center;
+    transform: scale(1.05);
+  }
+  &:focus{
+    outline: 0;
+    border: 0;
+    transform: scale(0.9);
   }
 }
