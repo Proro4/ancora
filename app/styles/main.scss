@@ -573,6 +573,16 @@ footer{
   left: 50%;
   top: 50%;
 }
+
+.brand .owl-theme .owl-nav{
+    margin-top: -40px;
+}
+.brand__slider{
+  video{
+    width: 100%;
+    height: 100%;
+  }
+}
 .owl-carousel .owl-nav button.owl-prev{
   position: absolute;
   left: 0;
@@ -711,6 +721,105 @@ footer{
     }
   }
 }
+.brand__slider{
+  .owl-item,
+  .item{
+    p{
+      margin: 25px 0 0 0;
+    }
+    height: 350px;
+    .owl-video-wrapper,
+    img{
+      height: 305px;
+      object-fit: cover;
+    }
+
+  }
+}
+.brand{
+  &__text{
+    max-width: 800px;
+    margin-bottom: 100px;
+  }
+}
+.collection{
+  &__next{
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-bottom: 20px;;
+    a{
+      padding-right: 35px;
+      color: $gray;
+      letter-spacing: 1.3px;
+      background: url("../images/col-arrow-2.png")no-repeat right center;
+      &:hover{
+        color: $red;
+        text-decoration: none;
+        background: url("../images/col-arrow-h.png")no-repeat right center;
+      }
+    }
+  }
+  &__link{
+    text-align: center;
+    padding-top: 100px;
+    .butt{
+      display: inline-block;
+    }
+  }
+    &__block{
+      &:hover{
+        text-decoration: none;
+      }
+      &__img{
+        margin-bottom: 35px;
+        height:225px;
+        background: #f5f5f5;
+        text-align: center;
+        img{
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+      }
+      &__text{
+        font-size: 21px;
+        font-family: 'NotoSans-Regular';
+        color: $black;
+        &:hover{
+          color: black;
+        }
+      }
+      &__link{
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        text-align: right;
+        overflow: hidden;
+        background: url("../images/col-arrow.png")no-repeat right center;
+        span{
+          display: inline-block;
+          color: black;
+          transition: 0.2s all;
+          font-size: 10px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transform: translate3d(100%,0,0);
+        }
+        }
+      &:hover{
+        .collection__block__link{
+          background: url("../images/col-arrow-h.png")no-repeat right center;
+          span{
+            color: $red;
+            transform: translate3d(-50px,0,0);
+          }
+        }
+      }
+    }
+}
 @media screen and (max-width: 992px){
   collections__block__img img{
     max-width: 100%;
@@ -832,5 +941,44 @@ footer{
   }
   .owl-carousel__items__text p{
     padding: 0 25px;
+  }
+
+}
+.shop-list{
+  &__block{
+    height: 225px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 30px;
+    &:hover{
+      text-decoration: none;
+      .shop-list__block__text{
+        transform: translate3d(0,-100%,0);
+        opacity: 0;
+      }
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__text{
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      background: rgba(0,0,0,0.21);
+      transition: 0.3s all;
+      p{
+        color: white;
+        font-size: 25px;
+      }
+    }
   }
 }

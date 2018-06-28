@@ -1,6 +1,17 @@
 $(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
+    $('.slider-head').owlCarousel({
         items:1,
+        nav: true,
+        dots:false,
+        navText:[,],
+        smartSpeed:1000
+    });
+    $('.brand__slider').owlCarousel({
+        center: true,
+        items:2,
+        loop:true,
+        margin:30,
+        video:true,
         nav: true,
         dots:false,
         navText:[,]
