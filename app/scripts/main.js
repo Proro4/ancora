@@ -61,4 +61,11 @@ $(document).ready(function(){
             $('.footer').prepend($('.footer__menu'));
         }
     });
+    $('.select p').on('click',function(){
+        if($(this).parent().hasClass('open')){
+            $(this).parent().removeClass('open');
+        }else{
+            $(this).parent().addClass('open');
+        }
+    });
 });
