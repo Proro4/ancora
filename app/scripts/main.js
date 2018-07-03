@@ -8,10 +8,23 @@ $(document).ready(function(){
     });
     $('.brand__slider').owlCarousel({
         center: true,
-        items:2,
+        items:1,
         loop:true,
         margin:30,
         video:true,
+        nav: true,
+        dots:false,
+        navText:[,],
+        responsive :{
+            992:{
+                items:2
+            }
+        }
+    });
+    $('.pen__slider').owlCarousel({
+        items:3,
+        loop:false,
+        margin:30,
         nav: true,
         dots:false,
         navText:[,]
@@ -109,5 +122,12 @@ $(document).ready(function(){
         }else{
             $(this).parent().addClass('open');
         }
+    });
+//Select2
+    $('.country-select').select2({
+        placeholder:'Страна'
+    });
+    $('.city-select').select2({
+        placeholder:'Город'
     });
 });
