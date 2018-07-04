@@ -51,6 +51,11 @@ $(document).ready(function(){
         }
     });
     $(window).scroll(function () {
+        if($(this).scrollTop() >= 1000){
+            $('.load-up').addClass('open');
+        }else{
+            $('.load-up').removeClass('open');
+        }
         if($(this).scrollTop() >= 40){
             $('.header-scroll').addClass('active');
             $('.header-mob-menu').removeClass('mob-d');
@@ -124,10 +129,21 @@ $(document).ready(function(){
         }
     });
 //Select2
-    $('.country-select').select2({
-        placeholder:'Страна'
-    });
-    $('.city-select').select2({
-        placeholder:'Город'
-    });
+    if($('select').length != 0){
+        $('.country-select').select2({
+            placeholder:'Страна'
+        });
+        $('.city-select').select2({
+            placeholder:'Город'
+        });
+    }
 });
+var t;
+function up() {
+    var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
+    if(top > 0) {
+        window.scrollBy(0,-100);
+        t = setTimeout('up()',20);
+    } else clearTimeout(t);
+    return false;
+}
