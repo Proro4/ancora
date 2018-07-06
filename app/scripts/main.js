@@ -139,6 +139,13 @@ $(document).ready(function(){
             placeholder:'Город'
         });
     }
+    $('.collection__filtr__sort span').on('click',function(){
+       if($(this).parent().hasClass('open')){
+           $(this).parent().removeClass('open');
+       } else{
+           $(this).parent().addClass('open');
+       }
+    });
 });
 var t;
 function up() {
