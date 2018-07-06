@@ -13,6 +13,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.css" />
     <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.theme.default.css" />
+    <link rel="stylesheet" href="/bower_components/fancybox/dist/jquery.fancybox.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -26,49 +27,46 @@
     <!-- endbuild -->
   </head>
   <body>
-    <header>
-      <div class="slider">
-          <div class="slider-head owl-carousel owl-theme">
-            <div class="owl-carousel__items">
-              <div class="owl-carousel__items__text">
-                  <h2>Коллекции</h2>
-              </div>
-              <img src="images/slider_2.png" alt="">
-            </div>
-            <div class="owl-carousel__items">
-              <div class="owl-carousel__items__text">
-                <h2>Коллекции</h2>
-              </div>
-              <img src="images/slider_1.png" alt="">
-            </div>
-            <div class="owl-carousel__items">
-              <img src="images/slider.png" alt="">
-            </div>
-            <div class="owl-carousel__items">
-              <img src="images/slider.png" alt="">
-            </div>
-          </div>
+  <a href="#" class="load-up" onclick="return up()">
+    наверх
+  </a>
+  <header>
+    <div class="slider">
+      <div class="slider-head owl-carousel owl-theme">
+        <div class="owl-carousel__items">
+          <img src="images/slider.png" alt="">
+        </div>
+        <div class="owl-carousel__items">
+          <img src="images/slider.png" alt="">
+        </div>
+        <div class="owl-carousel__items">
+          <img src="images/slider.png" alt="">
+        </div>
+        <div class="owl-carousel__items">
+          <img src="images/slider.png" alt="">
+        </div>
       </div>
-      <div  class="header header-top">
-        <div class="container">
-          <div class="row">
-            <div class="header__menu">
-              <div class="header__menu__left">
-                <div class="lang">
-                  <ul class="lang__list">
-                    <li class="lang__active"><p>РУС</p></li>
-                    <li><a href="#">ENG</a></li>
-                    <li><a href="#">DEU</a></li>
-                    <li><a href="#">IT</a></li>
-                    <li><a href="#">ESP</a></li>
-                    <li><a href="#">FR</a></li>
-                  </ul>
-                </div>
-                <ul class="header__menu__list">
-                  <li><a href="brand.html">О бренде</a></li>
-                  <li><a href="history.html">История и производтво</a>
-
-                    <div class="header-second-menu">
+    </div>
+    <div  class="header header-top">
+      <div class="container">
+        <div class="row">
+          <div class="header__menu">
+            <div class="header__menu__left">
+              <div class="lang">
+                <ul class="lang__list">
+                  <li class="lang__active"><p>РУС</p></li>
+                  <li><a href="#">ENG</a></li>
+                  <li><a href="#">DEU</a></li>
+                  <li><a href="#">IT</a></li>
+                  <li><a href="#">ESP</a></li>
+                  <li><a href="#">FR</a></li>
+                </ul>
+              </div>
+              <ul class="header__menu__list">
+                <li><a href="brand.html">О бренде</a></li>
+                <li><a href="history.html">История и производтво</a>
+                  <div class="header-second-menu">
+                    <div class="header-second-menu-h">
                       <div class="container">
                         <div class="row">
                           <div class="header-second-menu__inner">
@@ -97,108 +95,110 @@
                         </div>
                       </div>
                     </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="header__menu__center">
-                <a href="index.html" class="header__logo">
-                  <img src="images/logo.png" alt="">
-                </a>
-              </div>
-              <div class="header__menu__right">
-                <ul class="header__menu__top">
-                  <li><a href="#"><img src="images/login_ic.png" alt=""></a></li>
-                  <li><a href="#"><img src="images/shop_ic.png" alt=""></a></li>
-                  <li><a href="search.html"><img src="images/search_ic.png" alt=""></a></li>
-                </ul>
-                <ul class="header__menu__list">
-                  <li><a href="collections.html">Коллекции</a></li>
-                  <li><a href="shop.html">Магазин</a></li>
-                  <li><a href="shop-list.html">Список Магазинов</a></li>
-                </ul>
-              </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="header__menu__center">
+              <a href="index.html" class="header__logo">
+                <img src="images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="header__menu__right">
+              <ul class="header__menu__top">
+                <!--<li><a href="#"><img src="images/login_ic.png" alt=""></a></li>-->
+                <li><a href="basket.html"><img src="images/shop_ic.png" alt=""></a></li>
+                <li><a href="search.html"><img src="images/search_ic.png" alt=""></a></li>
+              </ul>
+              <ul class="header__menu__list">
+                <li><a href="collections.html">Коллекции</a></li>
+                <li><a href="shop.html">Магазин</a></li>
+                <li><a href="shop-list.html">Список Магазинов</a></li>
+                <li class="scroll-menu-exit"></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div  class="header header-scroll">
-        <div class="container">
-          <div class="row">
-            <div class="header__menu">
-              <div class="header__menu__left">
-                <div class="lang">
-                  <ul class="lang__list">
-                    <li class="lang__active"><p>РУС</p></li>
-                    <li><a href="#">ENG</a></li>
-                    <li><a href="#">DEU</a></li>
-                    <li><a href="#">IT</a></li>
-                    <li><a href="#">ESP</a></li>
-                    <li><a href="#">FR</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="header__menu__center">
-                <a href="index.html" class="header__logo">
-                  <img src="images/logo-m.png" alt="">
-                </a>
-              </div>
-              <div class="header__menu__right">
-                <ul class="header__menu__top">
-                  <li><a href="#" class="header__menu__but menu-scroll"><span></span><span></span><span></span></a></li>
-                  <li><a href="#"><img src="images/login_ic.png" alt=""></a></li>
-                  <li><a href="#"><img src="images/shop_ic.png" alt=""></a></li>
-                  <li><a href="search.html"><img src="images/search_ic.png" alt=""></a></li>
+    </div>
+    <div  class="header header-scroll">
+      <div class="container">
+        <div class="row">
+          <div class="header__menu">
+            <div class="header__menu__left">
+              <div class="lang">
+                <ul class="lang__list">
+                  <li class="lang__active"><p>РУС</p></li>
+                  <li><a href="#">ENG</a></li>
+                  <li><a href="#">DEU</a></li>
+                  <li><a href="#">IT</a></li>
+                  <li><a href="#">ESP</a></li>
+                  <li><a href="#">FR</a></li>
                 </ul>
               </div>
+            </div>
+            <div class="header__menu__center">
+              <a href="index.html" class="header__logo">
+                <img src="images/logo-m.png" alt="">
+              </a>
+            </div>
+            <div class="header__menu__right">
+              <ul class="header__menu__top">
+                <li><a href="#" class="header__menu__but menu-scroll"><span></span><span></span><span></span></a></li>
+                <!--<li><a href="#"><img src="images/login_ic.png" alt=""></a></li>-->
+                <li><a href="basket.html"><img src="images/shop_ic.png" alt=""></a></li>
+                <li><a href="search.html"><img src="images/search_ic.png" alt=""></a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="header-mob-menu">
-        <ul class="header-mob-menu__list">
-          <li><a href="#">О бренде</a></li>
-          <li><a href="#">История и производтво</a></li>
-          <li><a href="collections.html">Коллекции</a></li>
-          <li><a href="#">Магазин</a></li>
-          <li><a href="shop-list.html">Список Магазинов</a></li>
-        </ul>
-        <div class="header-mob-menu__top">
-          <li><a href="#"><img src="images/login_ic-b.png" alt=""></a></li>
-          <li><a href="#"><img src="images/shop_ic-b.png" alt=""></a></li>
-          <li><a href="search.html"><img src="images/search_ic-b.png" alt=""></a></li>
-        </div>
+    </div>
+    <div class="header-mob-menu">
+      <ul class="header-mob-menu__list">
+        <li><a href="brand.html">О бренде</a></li>
+        <li><a href="history.html">История и производтво</a></li>
+        <li><a href="collections.html">Коллекции</a></li>
+        <li><a href="#">Магазин</a></li>
+        <li><a href="shop-list.html">Список Магазинов</a></li>
+      </ul>
+      <div class="header-mob-menu__top">
+        <!--<li><a href="#"><img src="images/login_ic-b.png" alt=""></a></li>-->
+        <li><a href="basket.html" class="shop"><img src="images/shop_ic-b.png" alt=""><span class="shop__col">2</span></a></li>
+        <li><a href="search.html"><img src="images/search_ic-b.png" alt=""></a></li>
       </div>
-      <div  class="header header-mob">
-        <div class="container">
-          <div class="row">
-            <div class="header__menu">
-              <div class="header__menu__left">
-                <div class="lang">
-                  <ul class="lang__list">
-                    <li class="lang__active"><p>РУС</p></li>
-                    <li><a href="#">ENG</a></li>
-                    <li><a href="#">DEU</a></li>
-                    <li><a href="#">IT</a></li>
-                    <li><a href="#">ESP</a></li>
-                    <li><a href="#">FR</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="header__menu__center">
-                <a href="index.html" class="header__logo">
-                  <img src="images/logo-m.png" alt="">
-                </a>
-              </div>
-              <div class="header__menu__right">
-                <ul class="header__menu__top">
-                  <li><a href="#" class="header__menu__but menu-mob"><span></span><span></span><span></span></a></li>
+    </div>
+    <div  class="header header-mob">
+      <div class="container">
+        <div class="row">
+          <div class="header__menu">
+            <div class="header__menu__left">
+              <div class="lang">
+                <ul class="lang__list">
+                  <li class="lang__active"><p>РУС</p></li>
+                  <li><a href="#">ENG</a></li>
+                  <li><a href="#">DEU</a></li>
+                  <li><a href="#">IT</a></li>
+                  <li><a href="#">ESP</a></li>
+                  <li><a href="#">FR</a></li>
                 </ul>
               </div>
+            </div>
+            <div class="header__menu__center">
+              <a href="index.html" class="header__logo">
+                <img src="images/logo-m.png" alt="">
+              </a>
+            </div>
+            <div class="header__menu__right">
+              <ul class="header__menu__top">
+                <li><a href="#" class="header__menu__but menu-mob"><span></span><span></span><span></span></a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
     <section class="collections">
         <div class="container">
             <div class="row">
@@ -214,7 +214,7 @@
                     <div class="collections__block__text">
                         <h2>Limited Edition</h2>
                         <p>Коллекционные Ручки Ancora.</p>
-                        <a href="pen-detail.html" class="butt butt__link"> Подробней  </a>
+                        <a href="collection.html" class="butt butt__link"> Подробней  </a>
                     </div>
                     <div class="collections__block__img mob-n">
                         <img src="images/img_4.png" alt="">
@@ -227,7 +227,7 @@
                     <div class="collections__block__text">
                         <h2>Limited Production</h2>
                         <p>Новый проект: Чарльз Великий (Карло Магно), 50 роликовых и 50 перьевых ручек!</p>
-                        <a href="pen-detail.html" class="butt butt__link"> Подробней  </a>
+                        <a href="collection.html" class="butt butt__link"> Подробней  </a>
                     </div>
                 </div>
                 <div class="collections__block">
@@ -237,7 +237,7 @@
                     <div class="collections__block__text">
                         <h2>Classic Series</h2>
                         <p>Эксклюзивные пишущие инструменты ручной работы.</p>
-                        <a href="pen-detail.html" class="butt butt__link"> Подробней  </a>
+                        <a href="collection.html" class="butt butt__link"> Подробней  </a>
                     </div>
                     <div class="collections__block__img mob-n">
                         <img src="images/img_6.png" alt="">
@@ -314,6 +314,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <script src="/bower_components/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="/bower_components/fancybox/dist/jquery.fancybox.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     

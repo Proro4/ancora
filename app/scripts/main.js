@@ -4,7 +4,8 @@ $(document).ready(function(){
         nav: true,
         dots:false,
         navText:[,],
-        smartSpeed:1000
+        smartSpeed:1000,
+        loop:true
     });
     $('.brand__slider').owlCarousel({
         center: true,
@@ -51,6 +52,7 @@ $(document).ready(function(){
         }
     });
     $(window).scroll(function () {
+        $('.lang ').removeClass('open');
         if($(this).scrollTop() >= 1000){
             $('.load-up').addClass('open');
         }else{
