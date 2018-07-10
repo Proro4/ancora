@@ -801,6 +801,10 @@ footer{
   }
   &__slider{
     margin-bottom: 75px;
+    iframe{
+      height: 100%;
+      width: 100%;
+    }
   }
   &__info{
     display: flex;
@@ -1882,6 +1886,9 @@ footer{
   }
 }
 @media screen and (max-width: 992px){
+  .select ul{
+    position: relative;
+  }
   .collection__filtr__sort>span{
     text-align: right;
     padding-right: 35px;
