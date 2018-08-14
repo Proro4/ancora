@@ -1,4 +1,14 @@
 $(document).ready(function(){
+
+    $('.slider-head.one-slide').owlCarousel({
+        items:1,
+        nav: true,
+        dots:false,
+        navText:[,],
+        smartSpeed:1000,
+        mouseDrag:false,
+        touchDrag:false
+    });
     $('.slider-head').owlCarousel({
         items:1,
         nav: true,

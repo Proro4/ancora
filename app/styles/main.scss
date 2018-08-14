@@ -432,12 +432,16 @@ header{
       min-width: 35%;
       p{
         padding: 0 100px 25px;
+        text-align: center;
       }
     }
     h2{
       margin-bottom: 23px;
     }
   }
+}
+.img-right{
+  width: 750px;
 }
 .links{
   a{
@@ -447,6 +451,12 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    &:first-child{
+      margin-left: -15px;
+    }
+    &:last-child{
+      margin-right: -15px;
+    }
     &:hover{
       text-decoration: none;
     }
@@ -454,6 +464,7 @@ header{
       position: relative;
       z-index: 1;
       color: white;
+      margin-bottom: 30px;
     }
     .butt{
       position: relative;
@@ -754,7 +765,8 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 60px;
+    max-width: 1000px;
+    margin: 0 auto 60px;
     &__text{
       padding: 0 75px;
       h2{
