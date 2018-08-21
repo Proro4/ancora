@@ -337,6 +337,7 @@ header{
   }
   &__top{
     display: flex;
+    justify-content: center;
     li{
       display: inline-block;
       margin: 0 10px;
@@ -518,6 +519,7 @@ header{
   }
 }
 footer{
+  position: relative;
   padding: 40px 0 25px;
   margin-top: 130px;
   background: $black;
@@ -1785,6 +1787,7 @@ footer{
 .select2-container{
   height: 44px;
   margin-bottom: 25px;
+  width: 100% !important;
 }
 .select2-container--default .select2-selection--single{
   height: 44px;
@@ -1888,6 +1891,8 @@ footer{
   text-transform: uppercase;
   background: url("../images/ups.png")no-repeat top center;
   color: #7b7b7b;
+  z-index: 1000;
+  height: 60px;
   &.open{
     display: block;
   }
@@ -1896,8 +1901,16 @@ footer{
     text-decoration: none;
     color: black;
   }
+  &.fix{
+    position: absolute;
+    bottom: inherit;
+    top: -80px;
+  }
 }
 @media screen and (max-width: 992px){
+  .links a:last-child{
+    margin: 15px 0;
+  }
   .select ul{
     position: relative;
   }

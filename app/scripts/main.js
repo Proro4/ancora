@@ -1,5 +1,7 @@
 $(document).ready(function(){
-
+    if($('.fancy').length != 0) {
+        $('.fancy').fancybox();
+    }
     $('.slider-head.one-slide').owlCarousel({
         items:1,
         nav: true,
@@ -78,6 +80,15 @@ $(document).ready(function(){
             $('.header-mob-menu').addClass('mob-d');
             $('.header-scroll').removeClass('hide');
             $('.header-second-menu').show();
+        }
+        let loadBottom = $(this).scrollTop() + $(window).height();
+        let footerTop = $('footer').offset().top;
+        if(loadBottom > footerTop){
+            if($('.load-up').hasClass('fix')){}else{
+             $('.load-up').addClass('fix');
+            }
+        }else{
+            $('.load-up').removeClass('fix');
         }
     });
 //    MENU OPEN
